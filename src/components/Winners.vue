@@ -10,7 +10,7 @@
     <v-col cols="12">
       <v-virtual-scroll :items="sorted" :height="600">
         <template v-slot:default="{ item }">
-          <p>{{item.name}}:</p>
+          <h2>- {{item.name}}</h2>
           <ul>
             <li v-for="p in item.participants" :key="p.id">
               {{p.value}}
