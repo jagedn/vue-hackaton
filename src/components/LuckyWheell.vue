@@ -28,7 +28,7 @@ let gift = store.pickOne;
 
 // Optional: Center image
 const logo: ImgParams = {
-  src: 'https://commons.wikimedia.org/wiki/File:Hackathon_logo.jpg',
+  src: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Hackathon_logo.jpg',
   width: 100,
   height: 120
 };

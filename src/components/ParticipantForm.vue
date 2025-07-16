@@ -1,13 +1,6 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <div>
-        <v-text-field type="number" label="Groups" v-model="n" @change="setGroups" min="2" max="8"/>
-      </div>
-    </v-col>
-  </v-row>
-  <v-row>
-    <v-col cols="12">
       <v-text-field label="Nombre" v-model="text" @keydown.enter="onKeyUp"></v-text-field>
     </v-col>
     <v-col cols="12">
@@ -31,8 +24,7 @@ import {storeToRefs} from 'pinia';
 const store = useAppStore();
 
 const text = ref("")
-const {participants, groups} = storeToRefs(store)
-const n = ref(2)
+const {participants} = storeToRefs(store)
 
 function getDuplicates(arr, key) {
   return arr.filter((item, index, self) =>
@@ -63,11 +55,6 @@ const onKeyUp = (event)=>{
   }
   text.value = ""
 }
-
-const setGroups = ()=>{
-  store.setGroups(n.value);
-}
-
 </script>
 
 <style>
